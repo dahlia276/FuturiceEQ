@@ -26,11 +26,9 @@ class SearchQuake extends React.Component {
         this.setState({
           [name]: value,
         });
-        console.log(this.state)
       }; 
 
         handleSearch = async (event) => {
-            console.log(`this is the latitude val ${event.target}`)
         this.setState({
           latitude: event.target.value,
           longitude: event.target.value,
@@ -68,13 +66,11 @@ class SearchQuake extends React.Component {
                 <label> Maxradius: </label>
                 <input type="text"  name="maxradius" placeholder="[0, 180]" onChange={this.handleChange} value={maxradius} />
                 <ul>
-                {/* <button onClick={this.handleSearch}> Search </button> */}
                 <button> Search </button> 
-
-                    {this.state.earthquakes.map((quake, index) => {
+                    {this.state.earthquakes.map((quake, id) => {
                         return (
                             <>
-                            <li key={index}>
+                            <li key={id}>
                                 <h1> {quake.properties.title}</h1>
                                 <h3>Magnitude: {quake.properties.mag}</h3>
                             </li>

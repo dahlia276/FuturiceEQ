@@ -19,9 +19,9 @@ class EarthquakeList extends React.Component{
     render() {
       return (
         <>
-        {this.state.earthquakes.map((earthquake, index) => {
+        {this.state.earthquakes.map((earthquake, id) => {
             return (
-            <li key={index}>
+            <li key={id}>
             <h1> Location: {earthquake.properties.place} </h1>
             <h3> Magnitude: {earthquake.properties.mag} </h3>
             <h3>{earthquake.properties.url} </h3>
