@@ -36,3 +36,69 @@
     transform: rotate(360deg);
   }
 }
+
+.card{
+  width: 50%;
+  margin-left: 343px;
+}
+
+.list{
+  list-style: none;
+  margin-top: 10px;
+}
+
+.navbar-brand{
+  margin-left:70px;
+}
+
+.nav-clr{
+  background-color: #0e788d!important;
+  color:  #0e788d!important;
+}
+
+.nav-left{
+  margin-left: 726px;
+}
+
+.img{
+  margin-top: -700;
+  max-height: 423px;
+  min-width: 1447px;
+}
+
+.form{
+  border: 1px solid #0c788e;
+  border-radius: 10px;
+  width: 49%;
+  margin-top: 20px;
+  margin-left: 375px;
+}
+
+.btn{
+  color: white !important;
+  background-color: #0c788e !important;
+  border-color: #0c788e !important;
+  font-weight: bold !important;
+  margin-top: 16px !important;
+  margin-bottom: 10px !important;
+}
+
+.form-control{
+  width: 50% !important;
+  margin-left: 179px !important;
+  text-align: center !important;
+}
+
+.form-title{
+  font-weight: bold;
+}
+
+.list-title{
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+.location{
+  font-weight: bold;
+}
+
