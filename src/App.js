@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
-import React from "react"
+import React from "react";
 import { Switch, Route } from "react-router-dom";
-import {NavLink} from "react-router-dom"
-import axios from "axios"
-import EarthquakeList from "./components/EarthquakeList"
-import Navbar from "./components/Navbar"
-import Home from "./components/Home"
-import SearchQuake from './components/Search';
+import TodayEarthquakes from "./components/pages/TodayEarthquakes"
+import Navbar from "./components/shared/Navbar";
+import Search from './components/pages/Search';
+import "bootstrap/dist/css/bootstrap.min.css";
+import NearMe from './components/pages/NearMe';
 
 
 
 function App() {
   return (
     <div className="App">
+    <Navbar/>
+    <img src="/images/header.jpg" className="img" alt="Responsive"></img>
       <Switch>
-        <Route exact path="/" component={Home}/>
-        <Route exact path="/earthquakes" component={EarthquakeList}/>
-        <Route exact path="/search" component={SearchQuake}/>
+        <Route exact path="/" component={TodayEarthquakes}/>
+        <Route exact path="/near-me" component={NearMe}/>
+        <Route exact path="/search" component={Search}/>
       </Switch>
     </div>
   )
