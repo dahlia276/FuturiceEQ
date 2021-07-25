@@ -19,8 +19,8 @@ The user can know how far he currently is from earthquakes happening within a ce
 The user can play around with the pin on Google map & retrieve earthquakes in the chosen area.
 
 ### To contribute:
-1- Clone the repository 
-2- Run “npm install” to install all dependencies.
-3- Run “npm start”
-4- Visit (http://localhost:3000) in your browser to see the updates you made
+* Clone the repository 
+* Run `npm install` to install all dependencies.
+* Run `npm start`
+* Visit (http://localhost:3000) in your browser to see the updates you made
 
