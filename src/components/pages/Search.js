@@ -1,7 +1,7 @@
 import React from "react"
 import axios from "axios"
 import EarthquakesList from "../shared/EarthquakesList"
-
+import ReactLoading from "../shared/Loading"
 
 
 class Search extends React.Component {
@@ -9,15 +9,16 @@ class Search extends React.Component {
         earthquakes:[],
         latitude: "",
         longitude: "",
-        maxradius: ""
+        maxradius: "",
+        isLoading: false
     }
 
     async componentDidMountz() {
        const {latitude,longitude, maxradiuskm} = this.state
-        //const result = await axios.get(`https://earthquake.usgs.gov/fdsnws/event/1/query?latitude=${latitude}&longitude=${longitude}&maxradiuskm=${maxradiuskm}&format=geojson`)
-        const result = await axios.get(`https://earthquake.usgs.gov/fdsnws/event/1/query?latitude=${latitude}&longitude=${longitude}&maxradiuskm=${maxradiuskm}&format=geojson`)
+        let result = await axios.get(`https://earthquake.usgs.gov/fdsnws/event/1/query?latitude=${latitude}&longitude=${longitude}&maxradiuskm=${maxradiuskm}&format=geojson`)
         this.setState({
         earthquakes: result.data.features,
+        isLoading: false
         })
     }
 
@@ -45,7 +46,8 @@ class Search extends React.Component {
             longitude: longitude,
             maxradiuskm: maxradiuskm,
             foundQuakes: this.state.earthquakes.filter((earthquake) => 
-            earthquake.latitude.toLowerCase().includes(event.target.value.toLowerCase()))
+            earthquake.latitude.toLowerCase().includes(event.target.value.toLowerCase())),
+            isLoading:true
           }) 
         event.preventDefault();
         await this.componentDidMountz(this.state);
@@ -54,10 +56,12 @@ class Search extends React.Component {
     render () {
         const {longitude, latitude, maxradiuskm} = this.state
         return(
-            
-            <form  onSubmit={this.handleFormSubmit}>
+           
+            <>
+             <h1 className="form-title"> Search by coordinates </h1>
+             <form  onSubmit={this.handleFormSubmit}>
+             
             <div className="form">
-                <p className="form-title"> Search by coordinates </p>
                 <div className="form-group">
                 <label className="form-label" > Longitude </label>
                 <input className="form-control" type="number" min="-90" max="90" name="longitude" placeholder="[-90,90]" onChange={this.handleChange} value={longitude} required/>
@@ -72,11 +76,16 @@ class Search extends React.Component {
                 </div>
                 <button type="submit" className="btn" onClick={this.handleFormSubmit}> Search </button> 
                 </div>
+                { this.state.isLoading ? 
+                <ReactLoading />
+            : <>
                 <ul>
                     <EarthquakesList earthquakes={this.state.earthquakes} />
-                </ul>
-            </form>
-        )
+                </ul></>
+              } </form>
+
+               </>
+        ) 
     }
 
 }

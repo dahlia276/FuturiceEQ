@@ -4,6 +4,10 @@ import EarthquakeCard from "./EarthquakeCard";
 
 
 class EarthquakesList extends React.Component{
+    state = {
+        isLoading: false
+    }
+    
     render() {
       
       return (

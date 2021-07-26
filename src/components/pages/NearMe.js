@@ -1,10 +1,12 @@
 import React from "react"
 import axios from "axios"
 import EarthquakesList from "../shared/EarthquakesList"
+import ReactLoading from "../shared/Loading"
 
 class NearMe extends React.Component {
     state = {
-        earthquakes: []
+        earthquakes: [],
+        isLoading: true
     }
 
 
@@ -17,6 +19,7 @@ class NearMe extends React.Component {
             const eqs = result.data.features
             this.setState({
                 earthquakes:eqs,
+                isLoading: false
             })
         }
         navigator.geolocation.getCurrentPosition(success);
@@ -28,8 +31,11 @@ class NearMe extends React.Component {
         return(
             <>
             <h1>Earthquakes within 1000KM of you</h1>
+            { this.state.isLoading ? 
+                <ReactLoading  />
+            :
             <EarthquakesList earthquakes={this.state.earthquakes} />
-            </>
+             } </>
         )
     }
 }
