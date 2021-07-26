@@ -14,6 +14,7 @@ class Search extends React.Component {
 
     async componentDidMountz() {
        const {latitude,longitude, maxradiuskm} = this.state
+        //const result = await axios.get(`https://earthquake.usgs.gov/fdsnws/event/1/query?latitude=${latitude}&longitude=${longitude}&maxradiuskm=${maxradiuskm}&format=geojson`)
         const result = await axios.get(`https://earthquake.usgs.gov/fdsnws/event/1/query?latitude=${latitude}&longitude=${longitude}&maxradiuskm=${maxradiuskm}&format=geojson`)
         this.setState({
         earthquakes: result.data.features,
@@ -59,7 +60,7 @@ class Search extends React.Component {
                 <p className="form-title"> Search by coordinates </p>
                 <div className="form-group">
                 <label className="form-label" > Longitude </label>
-                <input className="form-control" type="text" name="longitude" placeholder="[-90,90]" onChange={this.handleChange} value={longitude} />
+                <input className="form-control" type="number" min="-90" max="90" name="longitude" placeholder="[-90,90]" onChange={this.handleChange} value={longitude} required/>
                 </div>
                 <div className="form-group">
                 <label className="form-label"> Latitude </label>

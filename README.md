@@ -24,3 +24,7 @@ The user can play around with the pin on Google map & retrieve earthquakes in th
 * Run `npm start`
 * Visit (http://localhost:3000) in your browser to see the updates you made
 
+### Future plans
+* Using Google maps to pin point locations instead of asking the user to enter coordinates.
+
+
