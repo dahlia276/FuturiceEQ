@@ -12,9 +12,6 @@ A web application based on the USGS API that allows you to browse earthquakes ha
 3- Alert levels
 * The user can get indication of the severity of each earthquake by colored alert levels.
 
-4- How far from your location
-* The user can know how far he currently is from earthquakes happening within a certain radius from his current location.
-
 
 
 ### To contribute:
@@ -25,5 +22,8 @@ A web application based on the USGS API that allows you to browse earthquakes ha
 
 ### Future plans
 * Search on google maps | The user can play around with the pin on Google map & retrieve earthquakes in the chosen area.
+* How far from your location | The user can know how far he currently is from earthquakes happening on a day.
+
+
 
 
