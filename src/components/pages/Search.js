@@ -1,3 +1,6 @@
+//Searh for earthquakes in a certain area using coordinates 
+//provided by the user 
+
 import React from "react"
 import axios from "axios"
 import EarthquakesList from "../shared/EarthquakesList"
@@ -68,11 +71,11 @@ class Search extends React.Component {
                 </div>
                 <div className="form-group">
                 <label className="form-label"> Latitude </label>
-                <input className="form-control" type="text" name="latitude" placeholder="[-180,180]" onChange={this.handleChange} value={latitude} />
+                <input className="form-control" type="number" name="latitude" placeholder="[-180,180]" onChange={this.handleChange} value={latitude} />
                 </div>
                 <div className="form-group">
                 <label className="form-label"> Maxradius </label>
-                <input className="form-control" type="text"  name="maxradiuskm" placeholder="[0, 20001.6] km" onChange={this.handleChange} value={maxradiuskm} />
+                <input className="form-control" type="number"  name="maxradiuskm" placeholder="[0, 20001.6] km" onChange={this.handleChange} value={maxradiuskm} />
                 </div>
                 <button type="submit" className="btn" onClick={this.handleFormSubmit}> Search </button> 
                 </div>

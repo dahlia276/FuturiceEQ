@@ -4,19 +4,18 @@ A web application based on the USGS API that allows you to browse earthquakes ha
 ### Features:
 
 1- List today’s quakes
-As a user, I can view a list of earthquakes that happened today.
+* As a user, I can view a list of earthquakes that happened today.
 
 2- Search by area
-The user can search for earthquakes that happened in a certain area using latitude, longitude & radius.
+* The user can search for earthquakes that happened in a certain area using latitude, longitude & radius.
 
 3- Alert levels
-The user can get indication of the severity of each earthquake by colored alert levels.
+* The user can get indication of the severity of each earthquake by colored alert levels.
 
 4- How far from your location
-The user can know how far he currently is from earthquakes happening within a certain radius from his current location.
+* The user can know how far he currently is from earthquakes happening within a certain radius from his current location.
 
-5- Search on google maps 
-The user can play around with the pin on Google map & retrieve earthquakes in the chosen area.
+
 
 ### To contribute:
 * Clone the repository 
@@ -25,6 +24,6 @@ The user can play around with the pin on Google map & retrieve earthquakes in th
 * Visit (http://localhost:3000) in your browser to see the updates you made
 
 ### Future plans
-* Using Google maps to pin point locations instead of asking the user to enter coordinates.
+* Search on google maps | The user can play around with the pin on Google map & retrieve earthquakes in the chosen area.
 
 

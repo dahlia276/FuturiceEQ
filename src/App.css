@@ -37,15 +37,7 @@
   }
 }
 
-.card{
-  width: 50%;
-  margin-left: 343px;
-}
-
-.list{
-  list-style: none;
-  margin-top: 10px;
-}
+/* Navbar styling */
 
 .navbar-brand{
   margin-left:70px;
@@ -66,21 +58,13 @@
   min-width: 1447px;
 }
 
+/* form styling */
 .form{
   border: 1px solid #0c788e;
   border-radius: 10px;
   width: 49%;
   margin-top: 20px;
   margin-left: 375px;
-}
-
-.btn{
-  color: white !important;
-  background-color: #0c788e !important;
-  border-color: #0c788e !important;
-  font-weight: bold !important;
-  margin-top: 16px !important;
-  margin-bottom: 10px !important;
 }
 
 .form-control{
@@ -93,6 +77,28 @@
   font-weight: bold;
 }
 
+.btn{
+  color: white !important;
+  background-color: #0c788e !important;
+  border-color: #0c788e !important;
+  font-weight: bold !important;
+  margin-top: 16px !important;
+  margin-bottom: 10px !important;
+}
+
+/* card styling */
+.card{
+  width: 50%;
+  margin-left: 343px;
+}
+
+/* List styling */
+
+.list{
+  list-style: none;
+  margin-top: 10px;
+}
+
 .list-title{
   margin-top: 35px;
   margin-bottom: 35px;
@@ -102,6 +108,7 @@
   font-weight: bold;
 }
 
+/* Loading element styling */
 .loading{
   margin-left: 650px;
 }

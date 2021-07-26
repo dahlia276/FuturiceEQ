@@ -1,8 +1,10 @@
+//Display the features of each earthquake
+
 import React from "react"
 
 
 class EarthquakeCard extends React.Component{
-    getDanger(){
+    getDanger(){ //Changes the color of the magnitude depending on the value
         const magnitude = this.props.earthquake.properties.mag
 
         if (magnitude <= 2) {
@@ -14,7 +16,7 @@ class EarthquakeCard extends React.Component{
         }
     }
 
-    getTime(){
+    getTime(){ //Converts unix to human readable format
         const date = new Date(this.props.earthquake.properties.time)
         return date.toLocaleDateString() + "-" + date.toLocaleTimeString()
     }

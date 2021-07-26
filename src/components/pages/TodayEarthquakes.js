@@ -1,3 +1,5 @@
+//List of all earthquakes that happened on the day
+
 import React from "react"
 import axios from "axios"
 import EarthquakesList from "../shared/EarthquakesList";
