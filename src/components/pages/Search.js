@@ -16,7 +16,7 @@ class Search extends React.Component {
         isLoading: false
     }
 
-    async componentDidMountz() {
+    async componentDidMount() {
        const {latitude,longitude, maxradiuskm} = this.state
         let result = await axios.get(`https://earthquake.usgs.gov/fdsnws/event/1/query?latitude=${latitude}&longitude=${longitude}&maxradiuskm=${maxradiuskm}&format=geojson`)
         this.setState({
@@ -53,7 +53,7 @@ class Search extends React.Component {
             isLoading:true
           }) 
         event.preventDefault();
-        await this.componentDidMountz(this.state);
+        await this.componentDidMount(this.state);
       };
 
     render () {
